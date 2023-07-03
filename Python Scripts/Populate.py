@@ -6,9 +6,6 @@ import multiprocessing
 # Initiate connection with the database
 connection_string = 'DRIVER={ODBC Driver 17 for SQL Server};SERVER=JARVIS;DATABASE=NewSample;Trusted_Connection=yes'
 fake = Faker()
-# generalConnection = pyodbc.connect(connection_string)
-# generalCursor = generalConnection.cursor()
-# generalCursor.execute("SET STATISTICS XML ON")
 
 
 # Generate data for Sales.Customers table
@@ -410,8 +407,8 @@ def main():
     orders_thread =  multiprocessing.Process(target=insertSalesOrders, args=[824240])
     products_thread = multiprocessing.Process(target=insertInventoryProducts)
     suppliers_thread = multiprocessing.Process(target=insertInventorySuppliers, args=[1140])
-    ecom_orders_thread = multiprocessing.Process(target=insertEcommerceOrders, args=[121010])
-    ecom_order_items = multiprocessing.Process(target=insertEcommerceOrderItems, args=[151540])
+    # ecom_orders_thread = multiprocessing.Process(target=insertEcommerceOrders, args=[121010])
+    # ecom_order_items = multiprocessing.Process(target=insertEcommerceOrderItems, args=[151540])
     hr_departments =  multiprocessing.Process(target=insertHrDepartments)
     hr_employees = multiprocessing.Process(target=insertHrEmployees, args=[78])
     financial_invoices = multiprocessing.Process(target=insertFinancialInvoices, args=[65540])
@@ -422,8 +419,8 @@ def main():
     orders_thread.start()
     products_thread.start()
     suppliers_thread.start()
-    ecom_orders_thread.start()
-    ecom_order_items.start()
+    # ecom_orders_thread.start()
+    # ecom_order_items.start()
     hr_departments.start()
     hr_employees.start()
     financial_invoices.start()
@@ -434,8 +431,8 @@ def main():
     orders_thread.join()
     products_thread.join()
     suppliers_thread.join()
-    ecom_orders_thread.join()
-    ecom_order_items.join()
+    # ecom_orders_thread.join()
+    # ecom_order_items.join()
     hr_departments.join()
     hr_employees.join()
     financial_invoices.join()
