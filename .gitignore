@@ -1,5 +1,4 @@
-SQL/addIndexes.sql
-SQL/oldSQL.sql
-SQL/rebuildIndexes.sql
+SQL/Index Optimization
+SQL/Create Tables/addIndexes.sql
 Python/Populate.py
 changelog.txt

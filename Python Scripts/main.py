@@ -6,6 +6,8 @@ import pycountry
 import datetime
 import time
 
+conn_string = 'DRIVER={ODBC Driver 17 for SQL Server};SERVER=JARVIS;DATABASE=NewSample;Trusted_Connection=yes'
+
 num_inserts_per_core = 5000
 max_employees = 150
 
@@ -520,7 +522,7 @@ def insertCustomer(conn_string):
             'address_id': insertAddress(cursor),
             'email': fake.email(),
             'email_consent': random.randint(0, 1),
-            'date_of_birth': fake.date_of_birth(),
+            'date_of_birth': fake.date_between(start_date='-50y', end_date='-10y'),
             'sms_consent': random.randint(0, 1),
             'register_date': fake.date_this_decade()
         }
@@ -547,7 +549,6 @@ def insertCustomer(conn_string):
 
 
 def main ():
-    conn_string = 'DRIVER={ODBC Driver 17 for SQL Server};SERVER=JARVIS;DATABASE=NewSample;Trusted_Connection=yes'
     cpu_count = multiprocessing.cpu_count()
     pool = multiprocessing.Pool(processes=cpu_count)
     test = [conn_string] * cpu_count
@@ -561,7 +562,6 @@ def main ():
 if __name__ == '__main__':
     start = time.time()
     main()
-    # conn_string = 'DRIVER={ODBC Driver 17 for SQL Server};SERVER=JARVIS;DATABASE=NewSample;Trusted_Connection=yes'
     # insertCustomer(conn_string)
     end_ms = round((time.time() - start) * 1000)
     end = round((time.time()- start))
