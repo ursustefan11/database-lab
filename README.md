@@ -1,6 +1,7 @@
-# Data Engineering Project: Fake Data Generator
+# Data Engineering Project: newsample-bak
+## Project Summary
 
-This project is a demonstration of data engineering skills using Python, SQL Server, and SSIS. The main goal of this project is to generate fake and random data for an OLTP database and an OLAP database, and to create an ETL pipeline to move data from the OLTP to the OLAP database.
+This project is a showcase of data engineering skills using Python, SQL Server, and SSIS. It demonstrates how to generate fake and random data for different scenarios, how to design and implement an OLTP and an OLAP database, and how to create an ETL pipeline using SSIS. The project can be used as a template or a reference for similar projects or as a learning resource for data engineering concepts and techniques.
 
 ## Project Overview
 
@@ -10,10 +11,6 @@ The project consists of three main components:
 - A SQL Server database that hosts the OLTP and OLAP databases. The OLTP database has a normalized schema with multiple tables and relationships. The OLAP database has a denormalized schema with a single fact table and multiple dimension tables.
 - An SSIS package that implements an ETL pipeline to move data from the OLTP to the OLAP database. The package uses data flow tasks, control flow tasks, and variables to perform various transformations and validations on the data.
 - Coming Soon: 
-
-## Project Summary
-
-This project is a showcase of data engineering skills using Python, SQL Server, and SSIS. It demonstrates how to generate fake and random data for different scenarios, how to design and implement an OLTP and an OLAP database, and how to create an ETL pipeline using SSIS. The project can be used as a template or a reference for similar projects or as a learning resource for data engineering concepts and techniques.
 
 ## How to Run the Project
 
