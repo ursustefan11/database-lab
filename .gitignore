@@ -1,5 +1,6 @@
 SQL/Index Optimization
 SQL/Create Tables/addIndexes.sql
-Python/Populate.py
+Python Scripts/Populate.py
+Python Scripts/.ipynb_checkpoints
 SSIS/DE Project
 changelog.txt
