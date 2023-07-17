@@ -2,7 +2,7 @@ IF NOT EXISTS(SELECT 1 FROM sys.server_principals WHERE name = N'python_insert')
 BEGIN
 
     CREATE LOGIN python_insert
-    WITH PASSWORD = 'SECURITY',
+    WITH PASSWORD = 'password',
         DEFAULT_DATABASE = NewSample,
         CHECK_POLICY = OFF
 
@@ -14,7 +14,6 @@ GO
 
 IF NOT EXISTS(SELECT 1 FROM sys.database_principals WHERE name = N'python_user')
 BEGIN
-
     CREATE USER python_user FOR LOGIN python_insert
 END;
 GO
