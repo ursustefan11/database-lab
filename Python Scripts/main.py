@@ -8,7 +8,8 @@ import time
 
 conn_string = 'DRIVER={ODBC Driver 17 for SQL Server};SERVER=JARVIS;DATABASE=NewSample;Trusted_Connection=yes'
 
-num_inserts_per_core = 5000
+
+num_inserts_per_core = 1000
 max_employees = 150
 
 fake = Faker()
@@ -561,8 +562,8 @@ def main ():
 
 if __name__ == '__main__':
     start = time.time()
-    main()
-    # insertCustomer(conn_string)
+    # main()
+    insertCustomer(conn_string)
     end_ms = round((time.time() - start) * 1000)
     end = round((time.time()- start))
     print(f"Elapsed {end_ms}ms ({end}s)")

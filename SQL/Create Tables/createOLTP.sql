@@ -37,7 +37,7 @@ CREATE TABLE Application.Address (
 CREATE TABLE Application.SessionType (
     session_id INT IDENTITY(1, 1),
     session_key VARCHAR(32),
-    user_agent VARCHAR(200),
+    user_agent NVARCHAR(200),
     CONSTRAINT PK_Application_SessionType_SessionID PRIMARY KEY (session_id)
 );
 
