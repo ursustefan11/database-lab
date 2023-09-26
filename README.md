@@ -1,4 +1,4 @@
-# Data Engineering Project: newsample-bak
+# Data Engineering Project: database-lab
 ## Project Summary
 
 This project is a showcase of data engineering skills using Python, SQL Server, and SSIS. It demonstrates how to generate fake and random data for different scenarios, how to design and implement an OLTP and an OLAP database, how to tune and optimize performance of SQL Server, and how to create an ETL pipeline using SSIS. The project can be used as a template or a reference for similar projects or as a learning resource for data engineering concepts and techniques, as the initial reason for creating this project was for experimenting.
